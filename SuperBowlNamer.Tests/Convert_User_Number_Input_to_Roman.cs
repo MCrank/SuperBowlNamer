@@ -102,5 +102,19 @@ namespace SuperBowlNamer.Tests
             // Assert
             Assert.Equal(expectedOutput, actualResult);
         }
+
+        [Fact]
+        public void Convert_User_Input_29_to_Roman_XXIX()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "29";
+            var expectedOutput = "XXIX";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
     }
 }
