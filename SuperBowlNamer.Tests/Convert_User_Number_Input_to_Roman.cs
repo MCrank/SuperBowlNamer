@@ -327,5 +327,19 @@ namespace SuperBowlNamer.Tests
             Assert.Equal(expectedOutput, actualResult);
         }
 
+        [Fact]
+        public void Convert_User_Input_2014_to_Roman_MMXIV()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "2014";
+            var expectedOutput = "MMXIV";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
+
     }
 }
