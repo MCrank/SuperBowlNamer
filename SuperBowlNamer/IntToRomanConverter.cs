@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SuperBowlNamer
 {
-    /*
+    /* List of the Main Roman numbers
      * 1 = I
      * 5 = V
      * 10 = X
@@ -16,10 +16,9 @@ namespace SuperBowlNamer
 
     public class IntToRomanConverter
     {
-        public string ConvertToRomanNumerals()
+        public string ConvertToRomanNumerals(string input)
         {
-            throw new NotImplementedException();
+            return input == "1" ? "I" : "No";
         }
-
     }
 }
