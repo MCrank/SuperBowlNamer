@@ -271,5 +271,19 @@ namespace SuperBowlNamer.Tests
             Assert.Equal(expectedOutput, actualResult);
         }
 
+        [Fact]
+        public void Convert_User_Input_1000_to_Roman_M()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "1000";
+            var expectedOutput = "M";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
+
     }
 }
