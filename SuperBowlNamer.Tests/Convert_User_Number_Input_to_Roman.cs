@@ -299,5 +299,19 @@ namespace SuperBowlNamer.Tests
             Assert.Equal(expectedOutput, actualResult);
         }
 
+        [Fact]
+        public void Convert_User_Input_1006_to_Roman_MVI()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "1006";
+            var expectedOutput = "MVI";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
+
     }
 }
