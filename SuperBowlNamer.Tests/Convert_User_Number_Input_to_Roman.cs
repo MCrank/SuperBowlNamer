@@ -9,10 +9,14 @@ namespace SuperBowlNamer.Tests
         public void Convert_User_Input_1_to_Roman_I()
         {
             // Arrange
-
+            var converter = new IntToRomanConverter();
+            var input = "1";
+            var expectedOutput = "I";
             // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
 
             // Assert
+            Assert.Equal(expectedOutput, actualResult);
 
         }
     }
