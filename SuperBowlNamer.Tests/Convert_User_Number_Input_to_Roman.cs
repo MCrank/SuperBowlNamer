@@ -243,5 +243,19 @@ namespace SuperBowlNamer.Tests
             Assert.Equal(expectedOutput, actualResult);
         }
 
+        [Fact]
+        public void Convert_User_Input_798_to_Roman_DCCXCVIII()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "798";
+            var expectedOutput = "DCCXCVIII";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
+
     }
 }
