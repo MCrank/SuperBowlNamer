@@ -116,5 +116,19 @@ namespace SuperBowlNamer.Tests
             // Assert
             Assert.Equal(expectedOutput, actualResult);
         }
+
+        [Fact]
+        public void Convert_User_Input_44_to_Roman_XLIV()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "44";
+            var expectedOutput = "XLIV";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
     }
 }
