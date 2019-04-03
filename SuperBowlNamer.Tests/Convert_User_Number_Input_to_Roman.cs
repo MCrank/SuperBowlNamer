@@ -88,5 +88,19 @@ namespace SuperBowlNamer.Tests
             // Assert
             Assert.Equal(expectedOutput, actualResult);
         }
+
+        [Fact]
+        public void Convert_User_Input_16_to_Roman_XVI()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "16";
+            var expectedOutput = "XVI";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
     }
 }
