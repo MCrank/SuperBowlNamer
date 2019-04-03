@@ -215,5 +215,19 @@ namespace SuperBowlNamer.Tests
             Assert.Equal(expectedOutput, actualResult);
         }
 
+        [Fact]
+        public void Convert_User_Input_501_to_Roman_DI()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "501";
+            var expectedOutput = "DI";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
+
     }
 }
