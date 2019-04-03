@@ -130,5 +130,19 @@ namespace SuperBowlNamer.Tests
             // Assert
             Assert.Equal(expectedOutput, actualResult);
         }
+
+        [Fact]
+        public void Convert_User_Input_45_to_Roman_XLV()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "45";
+            var expectedOutput = "XLV";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
     }
 }
