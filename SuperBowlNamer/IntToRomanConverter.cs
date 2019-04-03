@@ -40,7 +40,7 @@ namespace SuperBowlNamer
 
             foreach (var number in romanNumbers)
             {
-                // If number is >= 
+                // If number is >= Key in Dictionary Add value to stringbuilder and subtract value
                 while (numberToParse2 >= number.Key)
                 {
                     sb.Append(number.Value);
