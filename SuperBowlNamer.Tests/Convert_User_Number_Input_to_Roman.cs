@@ -158,5 +158,20 @@ namespace SuperBowlNamer.Tests
             // Assert
             Assert.Equal(expectedOutput, actualResult);
         }
+
+        [Fact]
+        public void Convert_User_Input_83_to_Roman_LXXXIII()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "83";
+            var expectedOutput = "LXXXIII";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
+
     }
 }
