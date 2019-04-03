@@ -341,5 +341,19 @@ namespace SuperBowlNamer.Tests
             Assert.Equal(expectedOutput, actualResult);
         }
 
+        [Fact]
+        public void Convert_User_Input_3999_to_Roman_MMMCMXCIX()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "3999";
+            var expectedOutput = "MMMCMXCIX";
+            // Act
+            var actualResult = converter.ConvertToRomanNumerals(input);
+
+            // Assert
+            Assert.Equal(expectedOutput, actualResult);
+        }
+
     }
 }
