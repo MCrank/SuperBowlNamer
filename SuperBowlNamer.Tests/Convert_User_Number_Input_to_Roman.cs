@@ -355,5 +355,28 @@ namespace SuperBowlNamer.Tests
             Assert.Equal(expectedOutput, actualResult);
         }
 
+        [Fact]
+        public void User_Input_Not_a_Number_Throws_Invalid_Input_Exception()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "d";
+            // Act
+
+            //Assert
+            Assert.Throws<InvalidInputException>(() => converter.ConvertToRomanNumerals(input));
+        }
+
+        [Fact]
+        public void User_Input_Zero_Throws_Invalid_Input_Exception()
+        {
+            // Arrange
+            var converter = new IntToRomanConverter();
+            var input = "0";
+            // Act
+
+            //Assert
+            Assert.Throws<InvalidInputException>(() => converter.ConvertToRomanNumerals(input));
+        }
     }
 }

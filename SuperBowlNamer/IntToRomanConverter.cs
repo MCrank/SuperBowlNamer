@@ -34,20 +34,32 @@ namespace SuperBowlNamer
             romanNumbers.Add(4, "IV");
             romanNumbers.Add(1, "I");
 
-            // Parse the input to int and create a stringbuilder for output
-            int numberToParse2 = int.Parse(input);
-            var sb = new StringBuilder();
-
-            foreach (var number in romanNumbers)
+            try
             {
-                // If number is >= Key in Dictionary Add value to stringbuilder and subtract value
-                while (numberToParse2 >= number.Key)
+
+                // Parse the input to int and create a stringbuilder for output
+                int numberToParse = int.Parse(input);
+                var sb = new StringBuilder();
+                if (numberToParse == 0)
                 {
-                    sb.Append(number.Value);
-                    numberToParse2 -= number.Key;
+                    throw new InvalidInputException();
                 }
+                foreach (var number in romanNumbers)
+                {
+                    // If number is >= Key in Dictionary Add value to stringbuilder and subtract value
+                    while (numberToParse >= number.Key)
+                    {
+                        sb.Append(number.Value);
+                        numberToParse -= number.Key;
+                    }
+                }
+                return sb.ToString();
             }
-            return sb.ToString();
+            catch (FormatException)
+            {
+
+                throw new InvalidInputException();
+            }
         }
     }
 }
